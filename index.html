@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>interface robo.</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/override.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <h1 class="title">interface robo.</h1>
+    <h5 class="subtitle">escolha comandos para o robo</h5>
+  </header>
+
+  <main>
+    <form class="was-validated">
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="eixo-check" name="radio-stacked" checked required>
+        <label class="custom-control-label" for="eixo-check">eixo</label>
+      </div>
+      <div class="custom-control custom-radio mb-3">
+        <input type="radio" class="custom-control-input" id="garra-check" name="radio-stacked" required>
+        <label class="custom-control-label" for="garra-check">garra</label>
+        <div class="invalid-feedback">selecione uma opção</div>
+      </div>
+
+      <div class="main-choise">
+        <div class="eixo">
+          <div class="form-group">
+            <select class="custom-select browser-default" id="eixos" required>
+              <option value="">escolha o eixo</option>
+              <option value="X">eixo X</option>
+              <option value="Y">eixo Y</option>
+              <option value="Z">eixo Z</option>
+            </select>
+            <div class="invalid-feedback">selecione um eixo</div>
+          </div>
+
+          <h6 class="question">quanto voce quer mover do eixo?</h5>
+            <div class="def-number-input number-input safari_only">
+              <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                class="minus"></button>
+              <input class="quantity" id="quant-move-eixo" min="0" name="quantity" value="1" type="number" required>
+              <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                class="plus"></button>
+            </div>
+        </div>
+
+        <div class="garra d-none">
+          <div class="form-group">
+            <select class="custom-select browser-default" id="garras">
+              <option value="">quer abrir ou fechar?</option>
+              <option value="true">abrir garra</option>
+              <option value="false">fechar garra</option>
+            </select>
+            <div class="invalid-feedback">selecione um eixo</div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-dark-green" id="submitForm">enviar comandos</button>
+        <button type="button" class="btn btn-blue-grey" id="newCommand">adicionar comando</button>
+        <button type="button" class="btn btn-info" id="demoCommand">demo</button>
+        <button type="button" class="btn btn-light" id="resetCommand">resetar eixos</button>
+      </div>
+
+    </form>
+
+    <div class="commands mt-4">
+      <h6 class="subtitle">comandos adicionados</h6>
+      <ul class="itens">
+      </ul>
+    </div>
+
+  </main>
+
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- weba -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

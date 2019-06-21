@@ -1,0 +1,61 @@
+body,
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    height: 100%;
+    max-width: 900px;
+    margin: auto;
+    background: #282828;
+}
+
+header {
+    padding: 2rem 2.5rem;
+}
+
+.title {
+    font-weight: bold;
+    color: #fff;
+}
+
+.subtitle {
+    font-weight: 400;
+    color: #ddd;
+}
+
+.question {
+    color: #ddd;
+}
+
+main {
+    padding: 2rem 2.5rem;
+}
+
+.garra,
+.eixo,
+.main-choise {
+    transition: opacity ease-in-out 300ms;
+}
+
+.main-choise {
+    opacity: 1;
+}
+
+.btn {
+    margin: 0.0rem 0.0rem 0.5rem 0.0rem;
+    text-transform: lowercase;
+}
+
+h6.subtitle {
+    font-size: 20px;
+}
+
+.itens {
+    margin: 0;
+    padding: 0;
+}
+
+ul.itens li {
+    color: #ddd;
+    list-style-type: none;
+    padding: .3rem 0;
+}
